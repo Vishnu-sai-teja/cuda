@@ -52,7 +52,7 @@ int main(){
     cudaMalloc((int **)&d_c, vector_size);
 
     cudaMemcpy(d_a, a, vector_size, cudaMemcpyHostToDevice);
-    cudaMemcpy(d_b, b, vector_size, cudaMemcpyDeviceToHost);
+    cudaMemcpy(d_b, b, vector_size, cudaMemcpyHostToDevice);
 
     // start with the process now - one element per thread
 
